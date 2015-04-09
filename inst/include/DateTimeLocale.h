@@ -2,12 +2,12 @@
 #define RCPP_DATE_TIME_LOCALE_H_
 
 #include <ctime>
-#include "Iconv.h"
+#include <Converter.h>
 #include <boost/noncopyable.hpp>
 
 class DateTimeLocale : boost::noncopyable {
   std::vector<std::string> month_, monthAbbrev_, day_, dayAbbrev_, period_;
-  Iconv encoder_;
+  Converter encoder_;
   char buff_[100];
 
 public:

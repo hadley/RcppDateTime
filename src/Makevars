@@ -1,2 +1,1 @@
-PKG_LIBS=-lRiconv
 PKG_CPPFLAGS=-I../inst/include/

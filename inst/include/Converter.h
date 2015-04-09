@@ -1,16 +1,16 @@
 #ifndef READ_ICONV_H_
 #define READ_ICONV_H_
 
-#include <iconv.h>
 #include <errno.h>
+#include <iconv.h>
 
-class Iconv {
+class Converter {
   iconv_t cd_;
   std::string buffer_;
 
 public:
 
-  Iconv(const std::string& from, const std::string& to = "UTF-8") {
+  Converter(const std::string& from, const std::string& to = "UTF-8") {
     cd_ = iconv_open(to.c_str(), from.c_str());
 
     if (cd_ == (iconv_t) -1) {
@@ -25,7 +25,7 @@ public:
     buffer_.resize(1024);
   }
 
-  ~Iconv() {
+  ~Converter() {
     iconv_close(cd_);
   }
 
