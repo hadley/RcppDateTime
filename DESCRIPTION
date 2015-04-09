@@ -1,13 +1,15 @@
 Package: RcppDateTime
-Title: What the Package Does (one line, title case)
+Title: Useful Functions for Working With Dates and Times.
 Version: 0.0.0.9000
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
-    person("RStudio", role = "cph")
+    person("RStudio", role = "cph"),
+    person("R Core Team", role = "ctb", comment = "Date time code adapted from R")
   )
-Description: What the package does (one paragraph)
+Description: Efficient implementations of common date time operations.
+    Useable from R or from Rcpp.
 Depends: R (>= 3.1.3)
 License: GPL-3
 LazyData: true
 LinkingTo: Rcpp
-Imports: Rcpp
+Imports: Rcpp, BH
